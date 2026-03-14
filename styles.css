@@ -1,0 +1,65 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: url('https://via.placeholder.com/1200x800?text=Soft+Background') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 56px; /* space for fixed navbar */
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    animation: fadeInContainer 1s ease-in-out;
+}
+
+@keyframes fadeInContainer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+    display: none;
+}
+
+#moreBtn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Bootstrap overrides if needed */
+.btn-danger:hover {
+    filter: brightness(1.1);
+    transition: filter 0.3s;
+}
+
+/* active nav link color override */
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #ff6f61 !important;
+}
+
+/* center forms on contact page */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gallery image styling */
+.row img {
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
